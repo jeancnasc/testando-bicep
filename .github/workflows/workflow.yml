@@ -66,7 +66,7 @@ jobs:
     environment: Website
     needs: preview
     outputs:
-      appServiceAppHostName: ${{ steps.deploy.outputs.appServiceAppHostName }}
+      appServiceAppHostName: ${{ steps.deploy.outputs.staticAppHostName }}
     steps:
     - uses: actions/checkout@v3
     - uses: azure/login@v1
