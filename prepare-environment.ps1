@@ -16,7 +16,7 @@ New-AzADAppFederatedCredential `
    -Audience 'api://AzureADTokenExchange' `
    -Subject "repo:$($githubOrganizationName)/$($githubRepositoryName):ref:refs/heads/master"
    
-$resourceGroup = New-AzResourceGroup -Name TestandoBicep -Location westus3
+$resourceGroup = New-AzResourceGroup -Name TestandoBicep -Location westus2
 
 New-AzADServicePrincipal -AppId $($applicationRegistration.AppId)
 New-AzRoleAssignment `
