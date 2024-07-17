@@ -15,8 +15,8 @@ param pipelineServicePrincipalObjectId string
 param keyVaultSecrectName string = 'TestandoBicepStaticWebAppDeploymentKey'
 
 
-var staticWebAppName = 'testando-bicep-${uniqueString(resourceGroup().id)}'
-var keyVaultName = 'testando-bicep-vault-${ substring(uniqueString(resourceGroup().id),0,6)}'
+var staticWebAppName = 'testando-${uniqueString(resourceGroup().id)}'
+var keyVaultName = 'testando-vault-${ substring(uniqueString(resourceGroup().id),0,6)}'
 
 var environmentConfigurationMap = {
   Production: {
